@@ -1,0 +1,52 @@
+* {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+html {
+    block-size: 100%;
+    inline-size: 100%;
+}
+
+div {
+    font-size: 72px;
+}
+
+body {
+    background: rgb(225, 254, 250);
+    background: linear-gradient(90deg, rgba(225, 254, 250, 1) 0%, rgba(204, 252, 255, 1) 100%);
+}
+
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    color: #333;
+}
+
+.message::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.message:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.message::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    background: #82A9F9;
+    z-index: -1;
+    transition: transform .3s ease;
+}
