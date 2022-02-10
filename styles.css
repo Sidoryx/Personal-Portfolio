@@ -50,3 +50,21 @@ body {
     z-index: -1;
     transition: transform .3s ease;
 }
+
+.socialLinks {
+    display: flex;
+    position: absolute;
+    font-size: 0.5em;
+    bottom: 1em;
+    left: 0;
+    right: 0;
+}
+.socialLinks__link {
+    margin: 0 auto;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
